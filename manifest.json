@@ -1,0 +1,38 @@
+{
+    "manifest_version": 2,
+    "name": "Password Enabler",
+    "version": "0.0.1",
+
+    "description": "Sometime in a web browser password field onpaste is disabled. this extension will give functionality to paste password on this extension and it will copy it to the password field",
+
+    "icons": {
+        "128": "icon128.png",
+        "48": "icon48.png",
+        "16": "icon16.png"
+    },
+    
+    "page_action": {
+        "default_icon": "icon16.png",
+        "default_popup": "popup.html"
+    },
+    "author": "Md. Atiqul Islam",
+    "background": {
+        "scripts": [
+            "eventPage.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": [
+                "jquery-3.2.1.min.js",
+                "contentPage.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "<all_urls>"
+    ]
+}
