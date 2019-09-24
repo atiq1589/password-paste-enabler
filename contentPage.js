@@ -1,6 +1,6 @@
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     if (request.type == 'pastePassword') {
-        $('input[type=password')[0].value = request.password;
+        $('input[type=password]')[0].value = request.password;
     }
 });
 
