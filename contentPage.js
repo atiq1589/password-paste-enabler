@@ -5,7 +5,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 });
 
 (function () {
-    if ($('input[type=password').length > 0) {
+    if ($('input[type=password]').length > 0) {
         chrome.runtime.sendMessage({
             type: "showPageAction"
         });
